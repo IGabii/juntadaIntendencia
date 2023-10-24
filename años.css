@@ -1,0 +1,60 @@
+body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1,h2,h3,p{
+    margin:0
+}
+
+.header-container{
+    width: 100%;
+    background: #2980B9;
+    background: -webkit-linear-gradient(to left, #FFFFFF, #6DD5FA, #2882be);  
+    background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); 
+    box-shadow:  1px 1px 3px #fff;
+}
+
+.nav-container{
+    display: flex;
+}
+
+figure{
+    margin:0;
+}
+
+.imagenLogo{
+    width: 170px;
+}
+
+.lineaDelTiempo-container{
+    display: grid;
+    grid-template-areas:
+    "tituloHeader tituloHeader"
+    "links links";
+    grid-template-rows: max1fr 1fr;
+}
+
+.titulo-header{
+    grid-area: tituloHeader;
+    display: flex;
+    align-items: end;
+}
+
+.tituloPromocion{
+    font-size: 40px;
+    padding-left: 60px;
+}
+
+.links a,ul,li{
+    grid-area: links;
+    text-decoration: none;
+    display: flex;
+    align-items: end;
+    padding-right:20px;
+}
+
+/*----------2024--------------------------------*/
+

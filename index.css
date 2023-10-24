@@ -1,0 +1,359 @@
+body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@font-face{
+    font-family:fuente;
+    src:url(fuentes/letra.ttf)
+}
+
+h1,h2,h3,p{
+    margin:0
+}
+
+.header-container{
+    width: 100%;
+    background: #2980B9;
+    background: -webkit-linear-gradient(to left, #FFFFFF, #6DD5FA, #2882be);  
+    background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); 
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+figure{
+    margin:0;
+}
+
+.imagenLogo{
+    width: 120px;
+}
+
+.lineaDelTiempo-container{
+    display: grid;
+    grid-template-areas:
+    "tituloHeader tituloHeader"
+    "links links";
+    grid-template-rows: max1fr 1fr;
+}
+
+.titulo-header{
+    grid-area: tituloHeader;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.tituloPromocion{
+    font-family: fuente;
+    font-size: 30px;
+    padding-left: 40px;
+    letter-spacing: 0.3cm;
+}
+
+.links, .ul-links, #a-liks,li{
+    grid-area: links;
+    text-decoration: none;
+    display: flex;
+    align-items: end;
+    font-size: 18px;
+    color:#000;
+    transition-duration: 0.5s;
+}
+
+
+#a-links:hover{
+    color:#FFFFFF;
+}
+
+.links li{
+    padding-right:60px;
+}
+
+.icon{
+    width: 16px;
+    height: 16px;
+    padding: 0 5px 3px 0 ;
+}
+
+.header-container-responsive{
+    display: none;
+}
+
+/*----------Inicio-----------------------------------------*/
+
+.bodyInicio-container{
+    background:linear-gradient(to top,rgba(0, 0, 0, 0.7),rgba(1,1,1,0.4)),url(galeria/fondoInicio.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color:#fff
+}
+
+.titulo-container-inicio{
+    text-align:center;
+}
+
+.bodyInicio-item{
+    display: grid;
+    grid-template-areas:
+    "eventosImg eventosTexto"
+    "resenaTexto resenaImg"
+    "integrantesImg integrantesTexto"
+    "informacionTexto informacionImg"
+    "eternamenteImg eternamenteTexto"
+    "galeriaTexto galeriaImg";
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin:50px 120px 0 120px;
+}
+
+.eventos-img{
+    grid-area: eventosImg;
+}
+
+.eventos-texto{
+    grid-area: eventosTexto;
+}
+
+.eventos-texto h2{
+    margin:20px
+}
+
+.resena-img{
+    grid-area: resenaImg;
+}
+
+.resena-texto{
+    grid-area: resenaTexto;
+}
+
+.integrantes-img{
+    grid-area: integrantesImg;
+}
+
+.integrantes-texto{
+    grid-area: integrantesTexto;
+}
+
+.informacion-img{
+    grid-area: informacionImg;
+}
+
+.informacion-texto{
+    grid-area: informacionTexto;
+}
+
+.eternamente-img{
+    grid-area: eternamenteImg;
+}
+
+.eternamente-texto{
+    grid-area: eternamenteTexto;
+}
+
+.galeria-img{
+    grid-area: galeriaImg;
+}
+
+.galeria-texto{
+    grid-area: galeriaTexto;
+}
+
+.eventos-img, .resena-img, .integrantes-img, .informacion-img, .eternamente-img, .galeria-img{
+    text-align: center;
+    padding-bottom: 150px;
+}
+
+.imgInicio{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+
+
+/*-----------Eventos--------------------------------------------*/
+.bodyEventos-container{
+    background-image: url(galeria/fondo.jpg);
+}
+
+.body{
+    color:#ffffff
+}
+
+.titulo-eventos h2{
+    text-align: center;
+    font-size: 30px;
+    padding: 40px;
+}
+
+.eventos-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.eventos-items{
+    width: 250px;
+    margin:20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition-duration: 0.6s;
+    padding: 20px;
+}
+
+.eventos-items:hover{
+    background-color: rgba(59, 41, 1, 0.9);
+    transform: scale(1.1);
+}
+
+.rojo:hover{
+    background-color: rgba(250, 1, 1, 0.9);
+}
+
+.texto-evento{
+    color:#ffffff
+}
+
+.imagen-evento img{
+    width: 250px;
+    padding: 15px 0 15px 0;
+}
+
+
+
+/*------------------responsive--------------------------------------*/
+
+@media only screen and (max-width:1336px){
+    .links li{
+        padding-right: 40px;
+    }
+}
+
+@media only screen and (max-width:1185px){
+
+    .imagenLogo{
+        width: 100px;
+    }
+
+    .links li{
+        padding-right: 30px;
+    }
+
+    .tituloPromocion{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width:1077px){
+    .imagenLogo{
+        width: 80px;
+    }
+
+    .links a{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width:985px){
+    .header-container{
+        display: none;
+    }
+
+    .header-container-responsive{
+        display: block;
+    }
+
+    .bodyInicio-container{
+        padding-top: 50px;
+    }
+
+    nav.menu-lateral{
+        width: 100%;
+        height: 10px;
+        background: #2980B9;
+        background: -webkit-linear-gradient(to left, rgb(255, 255, 255), rgb(109, 213, 250,1), rgb(40, 130, 190.0.7));  
+        background: linear-gradient(to left, rgb(255, 255, 255,0.8), rgb(109, 213, 2500), rgb(41, 128, 185,0.9));    
+        padding: 10px 0 20px 4px;
+        position: fixed;
+        top:0;
+        left:0;
+        overflow:hidden;
+        transition: .5s;
+        z-index: 1;
+    }
+    
+    nav.menu-lateral.expandir{
+        height:470px
+    }
+    
+    .btn-expandir{
+        width: 100%;
+        padding-left: 10px;
+        display: flex;
+        
+    }
+    
+    .btn-expandir > i{
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    ul{
+        height: 100%;
+        list-style-type: none;
+        padding: 0px;
+    }
+    
+    ul li.item-menu{
+        transition: .2s;
+    }
+    
+    ul li.activo{
+        background-color:rgba(254, 254, 251, 0.8);
+        color:#000;
+    }
+    
+    ul li.item-menu:hover{
+        background-color:rgba(254, 254, 251, 0.8);
+        
+    }
+    
+    ul li.item-menu a{
+        color:#fff;
+        text-decoration:none;
+        font-size: 16px;
+        padding: 10px 2%;
+        display: flex;
+        margin-bottom:0px;
+        line-height: 40px;
+        width: 100%;
+    }
+    
+    ul li.item-menu a .txt-link{
+        margin-left: 70px;
+        transition: 1s;
+    }
+    
+    ul li.item-menu a .icon > i{
+        font-size: 18px;
+    }
+
+    ul li.item-menu a:hover{
+        color:#000;
+    }
+
+    .tituloPromocion{
+        font-size: 20px;
+        letter-spacing: 0.01cm;
+        padding-left: 40px;
+    }
+}
